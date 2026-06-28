@@ -1,9 +1,3 @@
-class Node:
-    def __init__(self,data):
-        self.prev = None
-        self.data = data
-        self.next = None
-
 def Reverse(head):
     if head is None or head.next is None:
         return head
@@ -30,11 +24,18 @@ second.next = third
 third.prev = second
 
 head = first
+current = head
+print(" before reverse :",end = "")
+while current:
+    
+    print(current.data,end = " ")
+    current = current.next
 
 head = Reverse(head)
 
 current = head
-
+print("\n after reverse :",end = "")
 while current:
+    
     print(current.data, end = " ")
     current = current.next
