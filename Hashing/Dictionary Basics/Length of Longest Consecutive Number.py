@@ -1,12 +1,12 @@
 def Longs(nums):
     seen = set(nums)
     longest = 0
-    for num in nums:
-        if num -1 is not seen:
+    for num in seen:
+        if num -1 not in seen:
             length = 1
             while num + length in seen:
                 length += 1
             longest = max(longest,length)
     return longest
-nums = [1,2,6]
+nums = [0,1,2,3,6]
 print(Longs(nums))
