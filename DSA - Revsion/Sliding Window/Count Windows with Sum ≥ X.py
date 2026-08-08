@@ -3,11 +3,11 @@ def addele(nums , k , x):
     count = 0
     for i in range(k):
         curr += nums[i]
-        if curr >= x:
-            count += 1
+    if curr >= x:
+        count += 1
     for i in range(k , len(nums)):
         curr += nums[i]
-        curr -= nums[k-i]
+        curr -= nums[i-k]
         if curr >= x:
             count += 1
     return count
