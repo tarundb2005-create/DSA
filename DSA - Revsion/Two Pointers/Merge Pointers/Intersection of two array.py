@@ -13,6 +13,6 @@
             else:
                 if not result or result[-1] != nums1[i]:
                     result.append(nums1[i])
-            i += 1
-            j += 1
+                i += 1
+                j += 1
         return result
