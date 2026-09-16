@@ -1,7 +1,8 @@
 def histo(nums):
     stack =[]
     max_area = 0
-    for i in range(len(nums)):
+    for i in range(len(nums) + 1):
+        current = nums[i] if i < len(nums) else 0
         while stack and nums[i] < nums[stack[-1]]:
             top = stack.pop()
             right = i
